@@ -1,0 +1,46 @@
+.section {
+  background-color: var(--light-blue);
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1430px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.jobs {
+  display: grid;
+  grid-gap: 80px;
+}
+
+.jobItem {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  grid-gap: 40px;
+}
+
+.jobDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.jobOverall {
+  margin-bottom: 20px;
+}
+
+.jobOverall ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.jobName {
+  font-weight: 700;
+}
+
+.jobLink {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}

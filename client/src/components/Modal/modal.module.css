@@ -1,0 +1,70 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalBody {
+  max-width: 500px;
+  flex-basis: 500px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.close {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.error svg {
+  width: 80px;
+  height: 80px;
+}
+
+.message {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.success svg {
+  width: 80px;
+  height: 80px;
+}
+
+.bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55)
+}

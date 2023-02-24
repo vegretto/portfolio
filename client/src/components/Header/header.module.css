@@ -1,0 +1,42 @@
+.header {
+  background-color: var(--primary);
+  padding: 20px 0;
+  position: sticky;
+  top: -1px;
+  z-index: 1;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 48px;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+.controls {
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+
+.admin {
+  color: #fff;
+  margin-right: 7px;
+  text-decoration: underline;
+}
+
+.logout {
+  color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+}
