@@ -9,6 +9,8 @@ import Modal from "./components/Modal/Modal";
 const AdminNavMenu = React.lazy(() => import("./components/AdminNavMenu/AdminNavMenu"));
 const AdminPage = React.lazy(() => import('./components/AdminPage/AdminPage'));
 const AddWork = React.lazy(() => import('./components/AddWorkPage/AddWorkPage'));
+const EditWorksPage = React.lazy(() => import('./components/EditWorksPage/EditWorksPage'));
+const SingleWorkPage = React.lazy(() => import('./components/SingleWorkPage/SingleWorkPage'));
 const Works = React.lazy(() => import('./components/Works/Works'));
 const Experience = React.lazy(() => import('./components/Experience/Experience'));
 const Contacts = React.lazy(() => import('./components/Contacts/Contacts'));
@@ -90,8 +92,16 @@ function App() {
                     element: <Suspense fallback={<Loader/>}><AdminNavMenu/></Suspense>,
                 },
                 {
+                    path: "/admin/edit-works",
+                    element: <Suspense fallback={<Loader/>}><EditWorksPage /></Suspense>,
+                },
+                {
                     path: "/admin/add-work",
                     element: <Suspense fallback={<Loader/>}><AddWork setModal={setModal}/></Suspense>,
+                },
+                {
+                    path: "/admin/edit-work/:id",
+                    element: <Suspense fallback={<Loader/>}><SingleWorkPage setModal={setModal}/></Suspense>,
                 },
                 {
                     path: "/admin/add-user",

@@ -16,6 +16,9 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 router.get('/get-works', worksController.getWorks)
+router.post('/get-single-work', worksController.geSingleWork)
 router.post('/add-work', upload.single('img'), worksController.addWork)
+router.post('/update-work', upload.single('img'), worksController.updateWork)
+router.delete('/delete-work', worksController.deleteWork)
 
 export default router

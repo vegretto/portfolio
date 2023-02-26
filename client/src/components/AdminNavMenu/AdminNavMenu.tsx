@@ -4,7 +4,7 @@ const AdminNavMenu = () => {
     return (
         <ul>
             <li>
-                <Link to={`/admin/add-work`}>Добавить работу</Link>
+                <Link to={`/admin/edit-works`}>Редактировать работы</Link>
             </li>
             <li>
                 <Link to={`/admin/edit-experience`}>Редактировать опыт</Link>

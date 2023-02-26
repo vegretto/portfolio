@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import useHttp from "../../hooks/useHttp.hook";
-import {SubmitHandler, useForm, Controller} from "react-hook-form";
+import {SubmitHandler, useForm} from "react-hook-form";
 import styles from "../AddWorkPage/add-work-page.module.css";
 import {SetModal} from "../../App";
 
@@ -16,7 +16,6 @@ type FormFieldsType = {
 }
 
 const ExperienceForm = ({formValues, setModal, isUpdate}: {formValues?: FormFieldsType, setModal:SetModal, isUpdate: boolean} ) => {
-    console.log('formVals', formValues);
     const {request, error} = useHttp()
     const [response, setResponse] = useState({message: ''})
 
@@ -24,7 +23,6 @@ const ExperienceForm = ({formValues, setModal, isUpdate}: {formValues?: FormFiel
         register,
         handleSubmit,
         reset,
-        control,
         formState: {errors, isSubmitSuccessful},
     } = useForm<FormFieldsType>();
 
@@ -46,11 +44,10 @@ const ExperienceForm = ({formValues, setModal, isUpdate}: {formValues?: FormFiel
         } else if (error) {
             setModal({isVisible: true, isError: true, message: error})
         }
-    }, [response])
+    }, [response, error])
 
     const onSendForm: SubmitHandler<FormFieldsType> = async (data) => {
         try {
-            console.log('data', data);
             const formattedData = {
                 ...data,
                 companyDescriptionDetails: data.companyDescriptionDetails.split('\n'),
